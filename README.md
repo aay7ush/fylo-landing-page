@@ -8,7 +8,7 @@ Building realistic projects to improve my front-end skills.
 
 ### Links
 
-- Live Site URL: [Fylo landing page with two column layout](https://1ntro-section-dropdown.netlify.app/)
+- Live Site URL: [Fylo landing page with two column layout](https://fylo-land1ng-page.netlify.app/)
 
 ## Built with
 
