@@ -1,0 +1,78 @@
+@use "../utils/" as u;
+
+.cta {
+  color: var(--clr-light-grayish-blue);
+  background-color: var(--clr-desaturated-blue);
+  text-align: center;
+  padding: 4.5rem 3rem;
+  display: grid;
+  gap: 1.5rem;
+
+  &__content {
+    display: grid;
+    gap: 1.5rem;
+
+    &-title {
+      font-size: 1.4rem;
+
+      @include u.breakpoint(lg) {
+        font-size: 1.7rem;
+      }
+    }
+
+    &-body {
+      line-height: 1.6rem;
+      padding-inline: 1.4rem;
+
+      @include u.breakpoint(lg) {
+        padding-inline: 0 22vw;
+      }
+    }
+  }
+
+  &__sign-up {
+    display: grid;
+    gap: 1rem;
+
+    input {
+      outline: none;
+      height: 48px;
+      width: 100%;
+      padding: 1rem;
+      border: 1.6px solid var(--clr-desaturated-blue);
+      border-radius: 5px;
+
+      &::placeholder {
+        color: hsl(0, 0%, 84%);
+      }
+    }
+
+    .error {
+      display: none;
+      color: hsl(240, 75%, 98%);
+      padding-top: 0.3rem;
+    }
+
+    button {
+      box-shadow: 2px 3px 7px hsla(0, 0%, 30%, 0.76);
+
+      &:hover {
+        background-color: hsl(221, 100%, 71%);
+      }
+
+      @include u.breakpoint(lg) {
+        max-width: 220px;
+      }
+    }
+
+    @include u.breakpoint(lg) {
+      margin-block: auto;
+    }
+  }
+
+  @include u.breakpoint(lg) {
+    grid-template-columns: 2fr 1fr;
+    text-align: left;
+    padding: 7rem 8rem 5rem 4rem;
+  }
+}

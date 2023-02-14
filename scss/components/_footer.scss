@@ -1,0 +1,95 @@
+@use "../utils/" as u;
+
+.footer {
+  background-color: var(--clr-dark-blue);
+  color: var(--clr-light-grayish-blue);
+  padding: 4rem 3rem;
+  display: grid;
+  gap: 4rem;
+  font-size: 1.2rem;
+
+  &__content {
+    display: grid;
+    gap: 3rem;
+
+    .logo {
+      max-width: 200px;
+
+      @include u.breakpoint(lg) {
+        max-width: 150px;
+      }
+    }
+
+    .contacts {
+      display: grid;
+      gap: 1rem;
+
+      div {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+    }
+
+    @include u.breakpoint(lg) {
+      gap: 1rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__links {
+    display: grid;
+    gap: 4rem;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      a {
+        color: var(--clr-light-grayish-blue);
+        transition: 0.3s ease;
+
+        &:hover {
+          color: var(--clr-desaturated-blue);
+        }
+      }
+    }
+
+    @include u.breakpoint(lg) {
+      display: flex;
+      gap: 10vw;
+      margin-top: auto;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    place-content: center;
+    gap: 1rem;
+
+    i {
+      border: 1px solid var(--clr-light-grayish-blue);
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: hsl(221, 100%, 71%);
+        border-color: hsl(221, 100%, 71%);
+      }
+    }
+
+    @include u.breakpoint(lg) {
+      margin-block: auto;
+    }
+  }
+
+  @include u.breakpoint(lg) {
+    display: flex;
+    justify-content: space-around;
+    padding: 6rem 5rem 4rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,119 @@
+@use "../utils/" as u;
+
+.feature {
+  display: grid;
+  gap: 5rem;
+  margin-block: 7rem;
+
+  &__img {
+    max-width: 350px;
+    margin-inline: auto;
+
+    @include u.breakpoint(lg) {
+      max-width: 550px;
+      order: 1;
+    }
+  }
+
+  &__content {
+    display: grid;
+    gap: 1.7rem;
+
+    &-title {
+      font-size: 1.3rem;
+
+      @include u.breakpoint(lg) {
+        font-size: 2.3rem;
+        text-align: left;
+      }
+    }
+
+    &-body {
+      text-align: left;
+      display: grid;
+      gap: 1rem;
+
+      p {
+        color: var(--clr-desaturated-blue);
+        line-height: 1.6rem;
+      }
+
+      @include u.breakpoint(lg) {
+        padding-right: 7rem;
+      }
+    }
+
+    a {
+      min-width: 180px;
+      margin-inline: auto;
+      display: flex;
+      gap: 0.5rem;
+      color: var(--clr-moderate-cyan);
+      align-items: center;
+      border-bottom: 2px solid var(--clr-moderate-cyan);
+      padding-bottom: 0.5rem;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: hsl(178, 30%, 77%);
+        border-color: hsl(178, 30%, 77%);
+      }
+
+      img {
+        max-width: 25px;
+      }
+
+      @include u.breakpoint(lg) {
+        margin-inline: 0 auto;
+      }
+    }
+
+    &-review {
+      background-color: #fff;
+      padding: 1.5rem 2rem;
+      border-radius: 5px;
+      display: grid;
+      gap: 0.5rem;
+      box-shadow: 0 0 7px var(--clr-light-gray);
+
+      .icon {
+        max-width: 20px;
+      }
+
+      .body {
+        text-align: start;
+        line-height: 1.6rem;
+      }
+
+      .user {
+        display: flex;
+        gap: 1rem;
+
+        .avatar {
+          max-width: 40px;
+          border-radius: 50%;
+          overflow: hidden;
+        }
+
+        .info {
+          text-align: left;
+          font-size: 0.8rem;
+
+          p:nth-child(1) {
+            font-weight: var(--fw-bold);
+          }
+        }
+      }
+
+      @include u.breakpoint(lg) {
+        max-width: 400px;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  @include u.breakpoint(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
